@@ -36,3 +36,13 @@ source .venv/bin/activate
 ```sh
 ./develop.sh -c
 ```
+
+此时应该有如下文件：`build/compile_commands.json` 和 `deep_gemm/_C.cpython-312-x86_64-linux-gnu.so`
+
+第一个是用来读和写代码的，第二个是我们会用到的包的动态链接库。
+
+随后便可以将项目实际构建到我们的虚拟环境中：
+
+```sh
+uv pip install -e . --no-build-isolation
+```
