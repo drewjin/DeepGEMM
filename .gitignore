@@ -14,7 +14,7 @@ deep_gemm/include/cutlass
 /.vscode
 
 # clangd settings
-/.clang*
+# /.clang*
 /.cache
 
 # Generated stub files
