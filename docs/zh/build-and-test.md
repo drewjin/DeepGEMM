@@ -24,7 +24,7 @@ git clone --recursive git@github.com:deepseek-ai/DeepGEMM.git
 
 ```sh
 uv sync
-source .venv/bin/activate
+source .venv/bin/activate`
 ```
 
 # 构建环境并测试
@@ -46,3 +46,17 @@ source .venv/bin/activate
 ```sh
 uv pip install -e . --no-build-isolation
 ```
+
+此时便可以直接使用 `deep_gemm` 这个包了。
+
+运行测试脚本查看是否可以正常跑：
+
+```sh
+# Naive Run
+scripts/test_all.sh
+
+# Run with Logs
+mkdir -p log && scripts/test_all.sh 2>&1 | tee log/test_all.log
+```
+
+全部跑通就算构建完成了，现在点进 `csrc` 里也能正常索引代码，python 代码则更不必说了。

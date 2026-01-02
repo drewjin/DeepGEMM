@@ -28,3 +28,6 @@ uv.lock
 
 # compilation temp files
 compile_commands*
+
+# log files
+log/
